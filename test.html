@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .orange-bar {
+            width: 100%;
+            height: 39px;
+            background-color: #ff6200;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 320px;
+            padding-right: calc(100% - 1280px);
+        }
+
+        .orange-bar .left {
+            font-size: 15px;
+            line-height: 19px;
+            text-transform: uppercase;
+            color: #be3600;
+            font-family: "Bebas";
+        }
+
+        .orange-bar .right {
+            font-size: 15px;
+            line-height: 18px;
+            text-transform: uppercase;
+            color: #be3600;
+            font-family: "Bebas";
+        }
+
+        .menu-bar {
+            width: calc(1280px - 320px);
+            height: 110px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .menu-bar .logo {
+            font-size: 41px;
+            text-transform: uppercase;
+            color: #313131;
+            font-family: "Bebas";
+            margin-left: 0;
+        }
+
+        .menu-bar .nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        .menu-bar .nav a {
+            font-size: 13px;
+            text-transform: uppercase;
+            color: #333333;
+            font-family: "Myriad Pro";
+            text-decoration: none;
+            position: relative;
+        }
+
+        .menu-bar .nav a:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 34px;
+            left: 0;
+            width: 150px;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 1, 1, 0.38);
+            z-index: 10;
+        }
+
+        .dropdown a {
+            font-size: 12px;
+            line-height: 25px;
+            color: #454545;
+            font-family: "Open Sans";
+            text-decoration: none;
+            padding: 5px 10px;
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .breadcrumb {
+            margin-top: 10px;
+            padding-left: 320px;
+            font-size: 14px;
+            font-family: "Open Sans";
+            color: #878787;
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #878787;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .content {
+            margin-top: 43px;
+            /* Adjusted spacing from the breadcrumb */
+            padding-left: 320px;
+            padding-right: calc(100% - 1280px);
+        }
+
+        .content .contact-title {
+            font-size: 27px;
+            color: #ff6200;
+            font-weight: 700;
+            font-family: "Open Sans";
+            margin-bottom: 10px;
+        }
+
+        .content .textbox {
+            font-size: 14px;
+            line-height: 19px;
+            color: #878787;
+            font-family: "Ubuntu";
+            opacity: 0.82;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            width: calc(1280px - 320px);
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .form-container .left-section {
+            width: 60%;
+        }
+
+        .form-container .left-section h2 {
+            font-size: 20px;
+            color: #ff6200;
+            font-family: "Open Sans";
+            margin-bottom: 10px;
+        }
+
+        .form-container .left-section input,
+        .form-container .left-section textarea {
+            width: calc(50% - 10px);
+            margin: 10px 5px 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container .left-section textarea {
+            width: 100%;
+        }
+
+        .form-container .left-section button {
+            width: 100%;
+            background-color: #ff6200;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 16px;
+            font-family: "Open Sans";
+            cursor: pointer;
+        }
+
+        .form-container .right-section {
+            width: 35%;
+            text-align: right;
+        }
+
+        .form-container .right-section h2 {
+            font-size: 20px;
+            color: #ff6200;
+            font-family: "Open Sans";
+            margin-bottom: 10px;
+        }
+
+        .form-container .right-section p {
+            font-size: 14px;
+            line-height: 19px;
+            color: #313131;
+            font-family: "Open Sans";
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="orange-bar">
+        <div class="left">CALL US NOW! 385.154.11.28.35</div>
+        <div class="right">LOGIN SIGNUP</div>
+    </div>
+    <div class="menu-bar">
+        <div class="logo">YOURLOGO</div>
+        <div class="nav">
+            <a href="#">TITLE 1</a>
+            <a href="#">TITLE 2</a>
+            <a href="#">TITLE 3</a>
+            <a href="#">TITLE 4</a>
+            <a href="#">TITLE 5</a>
+            <a href="#">TITLE 6</a>
+            <a href="#">TITLE 7
+                <div class="dropdown">
+                    <a href="#">SUBMENU 1</a>
+                    <a href="#">SUBMENU 2</a>
+                    <a href="#">SUBMENU 3</a>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <a href="#">Home</a> / <a href="#">Who We Are</a> / Contact
+    </div>
+    <div class="content">
+        <div class="contact-title">Contact</div>
+        <div class="textbox">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam posuere ipsum nec velit
+            mattis elementum.</div>
+        <div class="form-container">
+            <div class="left-section">
+                <h2>CONTACT US</h2>
+                <input type="text" placeholder="Name *">
+                <input type="text" placeholder="Phone *">
+                <input type="email" placeholder="Email *">
+                <textarea placeholder="Message *" rows="5"></textarea>
+                <button>SUBMIT</button>
+            </div>
+            <div class="right-section">
+                <h2>REACH US</h2>
+                <p>Coalition Skills Test<br>535 La Plata Street<br>4200 Argentina</p>
+                <p>Phone: 385.154.11.28.38<br>Fax: 385.154.35.66.78</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
