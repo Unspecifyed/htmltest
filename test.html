@@ -41,23 +41,27 @@
         }
 
         .menu-bar {
-            width: calc(1280px - 320px);
+            width: 100%;
             height: 110px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 0 auto;
         }
 
         .menu-bar .logo {
+            position: absolute;
+            left: 320px;
+            /* Absolute position to align exactly at 320px */
             font-size: 41px;
             text-transform: uppercase;
             color: #313131;
             font-family: "Bebas";
-            margin-left: 0;
         }
 
         .menu-bar .nav {
+            margin-left: auto;
+            padding-right: calc(100% - 1280px);
+            /* Ensure right alignment */
             display: flex;
             justify-content: flex-end;
             gap: 20px;
@@ -120,7 +124,7 @@
 
         .content {
             margin-top: 43px;
-            /* Adjusted spacing from the breadcrumb */
+            /* Spacing between breadcrumb and Contact section */
             padding-left: 320px;
             padding-right: calc(100% - 1280px);
         }
